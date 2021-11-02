@@ -1,3 +1,3 @@
 # -*- coding:utf-8 -*-
 
-from . import planequipamiento
+from . import planequipamiento,planespacios,espacios

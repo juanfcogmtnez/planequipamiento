@@ -11,6 +11,8 @@
 	''',
 	'data':[
 	'views/menu.xml',
-	'views/planequipamiento_views.xml'
+	'views/planequipamiento_views.xml',
+	'views/planespacios_views.xml',
+	'views/espacios_views.xml'
 ],
 }

@@ -2,11 +2,24 @@
 
 <odoo>
 	<record id="action_open_planequipamiento" model="ir.actions.act_window">
-		<field name="name">Planes de equipamiento</field>
+		<field name="name">Plan de equipamiento</field>
 		<field name="res_model">planequipamiento</field>
 		<field name="view_mode">tree,form</field>
 	</record>
-	<menuitem id="menu_principal" name="Planes de equipamiento"/>
-	<menuitem id="menu_horizontal" name="Planes de equipamiento" parent="menu_principal"/>
-	<menuitem id="menu_vertical" name="Planes de equipamiento" parent="menu_horizontal" action="action_open_planequipamiento"/>
+        <record id="action_open_planespacios" model="ir.actions.act_window">
+                <field name="name">Plan de espacios</field>
+                <field name="res_model">planespacios</field>
+                <field name="view_mode">tree,form</field>
+        </record>
+        <record id="action_open_espacios" model="ir.actions.act_window">
+                <field name="name">Espacios</field>
+                <field name="res_model">espacios</field>
+                <field name="view_mode">tree,form</field>
+        </record>
+	<menuitem id="menu_principal" name="Estudios"/>
+	<menuitem id="menu_horizontal" name="Planes funcionales" parent="menu_principal"/>
+	<menuitem id="menu_vertical_peq" name="Planes de equipamiento" parent="menu_horizontal" action="action_open_planequipamiento"/>
+	<menuitem id="menu_vertical_pes" name="Planes de espacios" parent="menu_horizontal" action="action_open_planespacios"/>
+	<menuitem id="menu_vertical_es" name="Espacios" parent="menu_horizontal" action="action_open_espacios"/>
+
 </odoo>

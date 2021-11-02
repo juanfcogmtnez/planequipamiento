@@ -7,4 +7,4 @@ class Planequipamiento(models.Model):
 	_name = "planequipamiento"
 	_inherits = {'project.task':'plan'}
 	plan = fields.Many2one('project.task') 	
-	active = fields.Boolean(string="Activo",default=False)
+	active = fields.Boolean(string="Activo",default=True)

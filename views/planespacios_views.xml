@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<odoo>
+        <record id="view_planespacios_form" model="ir.ui.view">
+                <field name="name">Vista formulario de plan de espacios</field>
+                <field name="model">planespacios</field>
+                <field name="arch" type="xml">
+                <form>
+                                <sheet>
+                                <widget name="web_ribbon" title="Archivado" bg-color="bg-info" attrs="{'invisible':[('active','=',True)]}"/>
+                                <div class="oe_title">
+                                        <div class="o_row">
+                                                <h1 style="display:flex;">
+                                                        <field name="plan" class="oe_inline" placeholder="Nombre del espacio" required="1" default_focus="1"></field>
+                                                </h1>
+                                        </div>
+                                </div>
+                                <group string="Datos principales" style="margin-top:-10px">
+                                        <group>
+                                                <field name="project_id" placeholder="Nombre del proyecto" required="1"/>
+                                        </group>
+                                        <group>
+                                                <field name="active"></field>
+                                        </group>
+					<field name="espacios_ids"/>
+                                </group>
+                                </sheet>
+                </form>
+                </field>
+        </record>
+</odoo>
+
